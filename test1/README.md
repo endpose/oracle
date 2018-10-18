@@ -59,5 +59,4 @@ group by manager_id
 having min(salary)>=6000
 and manager_id is not null;
 ```
-
-![优化](https://github.com/endpose/oracle/blob/master/test1/查询.jpg)
+![](https://github.com/endpose/oracle/blob/master/test1/chaxun.jpg)
