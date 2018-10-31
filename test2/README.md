@@ -7,7 +7,7 @@ SQL> CREATE ROLE shen_res_view;
 Role created.
 SQL> GRANT connect,resource,CREATE VIEW TO shen_res_view;
 Grant succeeded.
-SQL> CREATE USER new_user IDENTIFIED BY 123 DEFAULT TABLESPACE users TEMPORARY TABLESPACE temp;
+SQL> CREATE USER shen IDENTIFIED BY 123 DEFAULT TABLESPACE users TEMPORARY TABLESPACE temp;
 User created.
 SQL> ALTER USER shen QUOTA 50M ON users;
 User altered.
