@@ -15,7 +15,7 @@ SQL> GRANT shen_res_view TO shen;
 Grant succeeded.
 SQL> exit
 ```
-
+![TUYI](https://github.com/endpose/oracle/blob/master/test2/1.jpg)
 
 - 第2步：新用户shen连接到pdborcl，创建表mytable和视图myview，插入数据，最后将myview的SELECT对象权限授予hr用户。
 
@@ -40,6 +40,7 @@ SQL> GRANT SELECT ON myview TO hr;
 Grant succeeded.
 SQL>exit
 ```
+![TUYI](https://github.com/endpose/oracle/blob/master/test2/3.jpg)
 
 - 第3步：用户hr连接到pdborcl，查询shen授予它的视图myview
 
@@ -52,3 +53,4 @@ zhang
 wang
 SQL> exit
 ```
+![TUYI](https://github.com/endpose/oracle/blob/master/test2/4.jpg)
