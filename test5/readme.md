@@ -39,3 +39,23 @@ END MyPack;
 ## 运行结果
 ![TUYI](https://github.com/endpose/oracle/blob/master/test5/11.jpg)
 
+## 测试
+```sql
+函数Get_SaleAmount()测试方法：
+select count(*) from orders;
+select MyPack.Get_SaleAmount(11) AS 部门11应收金额,MyPack.Get_SaleAmount(12) AS 部门12应收金额 from dual;
+
+
+过程Get_Employees()测试代码：
+set serveroutput on
+DECLARE
+  V_EMPLOYEE_ID NUMBER;    
+BEGIN
+  V_EMPLOYEE_ID := 1;
+  MYPACK.Get_Employees (  V_EMPLOYEE_ID => V_EMPLOYEE_ID) ;  
+  V_EMPLOYEE_ID := 11;
+  MYPACK.Get_Employees (  V_EMPLOYEE_ID => V_EMPLOYEE_ID) ;    
+END;
+```
+## 测试结果
+![TUYI](https://github.com/endpose/oracle/blob/master/test5/22.jpg)
