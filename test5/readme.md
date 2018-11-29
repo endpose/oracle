@@ -36,3 +36,6 @@ create or replace PACKAGE BODY MyPack IS
     END;
 END MyPack;
 ```
+## 运行结果
+![TUYI](https://github.com/endpose/oracle/blob/master/test5/11.jpg)
+
