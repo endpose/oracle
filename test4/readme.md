@@ -10,48 +10,48 @@ EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
 ```
 分配权限
 ```sql
-GRANT "CONNECT" TO xiaoqingyu WITH ADMIN OPTION;
-GRANT "RESOURCE" TO xiaoqingyu WITH ADMIN OPTION;
-ALTER USER xiaoqingyu DEFAULT ROLE "CONNECT","RESOURCE";
+GRANT "CONNECT" TO SHEN WITH ADMIN OPTION;
+GRANT "RESOURCE" TO SHEN WITH ADMIN OPTION;
+ALTER USER xiaoqingyu SHEN ROLE "CONNECT","RESOURCE";
 ```
 系统分配权限
 ```sql
-GRANT CREATE VIEW TO xiaoqingyu WITH ADMIN OPTION;
+GRANT CREATE VIEW TO SHEN WITH ADMIN OPTION;
 ```
 插入初始数据
 ```sql
-INSERT INTO xiaoqingyu.DEPARTMENTS(DEPARTMENT_ID,DEPARTMENT_NAME) values (1,'总经办');
-INSERT INTO xiaoqingyu.EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
+INSERT INTOSHEN .DEPARTMENTS(DEPARTMENT_ID,DEPARTMENT_NAME) values (1,'总经办');
+INSERT INTO SHEN .EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
   VALUES (1,'李董事长',NULL,NULL,to_date('2010-1-1','yyyy-mm-dd'),50000,NULL,1);
 
-INSERT INTO xiaoqingyu.DEPARTMENTS(DEPARTMENT_ID,DEPARTMENT_NAME) values (11,'销售部1');
-INSERT INTO xiaoqingyu.EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
+INSERT INTO SHEN .DEPARTMENTS(DEPARTMENT_ID,DEPARTMENT_NAME) values (11,'销售部1');
+INSERT INTO SHEN .EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
   VALUES (11,'张总',NULL,NULL,to_date('2010-1-1','yyyy-mm-dd'),50000,1,1);
-INSERT INTO xiaoqingyu.EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
+INSERT INTO SHEN .EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
   VALUES (111,'吴经理',NULL,NULL,to_date('2010-1-1','yyyy-mm-dd'),50000,11,11);
-INSERT INTO xiaoqingyu.EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
+INSERT INTO SHEN .EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
   VALUES (112,'白经理',NULL,NULL,to_date('2010-1-1','yyyy-mm-dd'),50000,11,11);
 
-INSERT INTO xiaoqingyu.DEPARTMENTS(DEPARTMENT_ID,DEPARTMENT_NAME) values (12,'销售部2');
-INSERT INTO xiaoqingyu.EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
+INSERT INTO SHEN .DEPARTMENTS(DEPARTMENT_ID,DEPARTMENT_NAME) values (12,'销售部2');
+INSERT INTO SHEN .EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
   VALUES (12,'王总',NULL,NULL,to_date('2010-1-1','yyyy-mm-dd'),50000,1,1);
-INSERT INTO xiaoqingyu.EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
+INSERT INTO SHEN .EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
   VALUES (121,'赵经理',NULL,NULL,to_date('2010-1-1','yyyy-mm-dd'),50000,12,12);
-INSERT INTO xiaoqingyu.EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
+INSERT INTO SHEN .EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
   VALUES (122,'刘经理',NULL,NULL,to_date('2010-1-1','yyyy-mm-dd'),50000,12,12);
 
 
-insert into xiaoqingyu.products (product_name,product_type) values ('computer1','电脑');
-insert into xiaoqingyu.products (product_name,product_type) values ('computer2','电脑');
-insert into xiaoqingyu.products (product_name,product_type) values ('computer3','电脑');
+insert into SHEN.products (product_name,product_type) values ('computer1','电脑');
+insert into SHEN.products (product_name,product_type) values ('computer2','电脑');
+insert into SHEN.products (product_name,product_type) values ('computer3','电脑');
 
-insert into xiaoqingyu.products (product_name,product_type) values ('phone1','手机');
-insert into xiaoqingyu.products (product_name,product_type) values ('phone2','手机');
-insert into xiaoqingyu.products (product_name,product_type) values ('phone3','手机');
+insert into SHEN.products (product_name,product_type) values ('phone1','手机');
+insert into SHEN.products (product_name,product_type) values ('phone2','手机');
+insert into SHEN.products (product_name,product_type) values ('phone3','手机');
 
-insert into xiaoqingyu.products (product_name,product_type) values ('paper1','耗材');
-insert into xiaoqingyu.products (product_name,product_type) values ('paper2','耗材');
-insert into xiaoqingyu.products (product_name,product_type) values ('paper3','耗材')；
+insert into SHEN.products (product_name,product_type) values ('paper1','耗材');
+insert into SHEN.products (product_name,product_type) values ('paper2','耗材');
+insert into SHEN.products (product_name,product_type) values ('paper3','耗材')；
 ```
 插入一万条数据
 ```sql
